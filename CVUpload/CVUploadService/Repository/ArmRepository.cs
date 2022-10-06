@@ -48,7 +48,7 @@ namespace CVUploadService
                         da.Fill(dtSource);
                     }
                 }
-                using (SqlBulkCopy bulk = new SqlBulkCopy(_connectionDB.con) { DestinationTableName = "[" + temTableNamePrefix1 + tableName + "]", BatchSize = 500000000, BulkCopyTimeout = 0 })
+                using (SqlBulkCopy bulk = new SqlBulkCopy(_connectionDB.con) { DestinationTableName = "[" + temTableNamePrefix1 + tableName + "]", BatchSize = 4000, BulkCopyTimeout = 0 })
                 {
 
                     for (int i = 0; i < dt.Columns.Count; i++)

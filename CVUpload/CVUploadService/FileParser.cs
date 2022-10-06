@@ -95,7 +95,7 @@ namespace CVUploadService
                 if (isValid == "" || isValid == string.Empty)
                 {
                     DataTable dt = GetFileData(file.Key, file.Value);
-                    _logger.Log("File converted to Datatable Successful!", UploadLogFile.Replace("DDMMYY", DateTime.Now.ToString("ddMMyy")));
+                    _logger.Log($"File {file.Key} converted to Datatable Successful!", UploadLogFile.Replace("DDMMYY", DateTime.Now.ToString("ddMMyy")));
                     if (dt != null)
                     {
 
